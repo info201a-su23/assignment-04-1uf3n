@@ -5,67 +5,36 @@ output: html_document
 
 ### Introduction
 
-An introduction of the problem domain and a description of the variable(s) you are choosing to analyze (and why!)
+The issue of the population of various ethnic groups in prisons is a crucial issue for society and the criminal justice system. and the imprisonment rates of each ethnic group have significant social and human rights impacts, even reflecting racial issues. In this analysis, my goal is to explore trends and patterns in the prison population of each race to gain a deeper understanding of the imprisonment situation. The variable I am going to analyze is the dataset about prison population per county/state. It is based on racial distribution, which is essential for understanding the scope and racial categories of the prison population in the United States. By examining the prison population of each race, we can analyze whether there are potential human rights issues for races with high incarceration rates, which may require further investigation and policy intervention. A deeper understanding of the prison population aims to establish a fair and effective criminal justice system that ensures the rights and well-being of all individuals in society.
 
 ### Summary Information
 
-Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
-
-These will likely be calculated using your DPLYR skills, answering questions such as: 
-
-- What is the average value of my variable across all the counties (in the current year)?
-- Where is my variable the highest / lowest?
-- How much has my variable change over the last N years?
-
-Feel free to calculate and report values that you find relevant. Again, remember that the purpose is to think about how these measure of incarceration vary by race.
+The total population in prison across the United States in 2018 is **327167434** people. The average value of the total population in prison across the United States in 2018 is about **104227** people. The state with the highest total population in prison is California, which is **10120540** people. And the states with the lowest total population in prison are Alaska, Arizona, Colorado, Hawaii, Missouri, New Mexico, and Virginia, which is **0** people. In 2018, the percentage of black prisoners was **8.81%**, and the percentage of white prisoners was **39.43%**. This reflects the significant improvement in racial discrimination in society in 2018, and the criminal justice system adheres to fairness and justice in arresting prisoners. As the 2018 data did not include the total number of black and white prisoners, I used a large population aged 15 to 63.
 
 ### The Dataset
 
-Who collected the data?  
-How was the data collected or generated?  
-Why was the data collected?  
-How many observations (rows) are in your data?  
-How many features (columns) are in the data?  
-What, if any, ethical questions or questions of power do you need to consider when working with this data?  
-What are possible limitations or problems with this data?   (at least 200 words)
-
+The Vera Institute and U.S. Department of Justice Bureau of Justice Statistics (BJS) collected the data, especially the NCRP. The data was collected over several years through different surveys, each focusing on specific aspects of incarceration. NCRP has provided detailed individual-level data on admissions and releases from state prison authorities since 1983. DCRP contains facility-level data on jail average daily populations, admissions, and single-day population counts for the years 2000 to 2013. ASJ provides annual, county-level data on jail admissions, releases, and population estimates for a sample of jurisdictions identified from the Census of Jails since 1982. And COJ collects data from all U.S. counties since 1970. This data is collected to provide detailed information on prison incarceration and related measures throughout the United States. There are **153811 observations** and **36 features** in the data. The issue of imprisonment cannot be separated from social and racial factors. So when processing these prison data, it is necessary to assess the potential impact of analysis to ensure that the results do not lead to bias or racism. Possible limitations and issues with data include missing data, changes in data collection methods, biases brought by racial issues, and misanalyses. Some states and counties may have missing data, resulting in incomplete and unrepresentative analysis. The changes in data collection methods year by year may lead to biases in the data itself, inconsistent data across datasets, and a lack of accuracy in the data. The prejudices brought by racial issues may vary due to the different judicial systems in different regions. The population size of certain races in prisons may not align with the facts and may even be interpreted excessively. When analyzing research data, it may lead to misleading conclusions due to a lack of understanding of the background of the criminal justice system.
 
 ### Trends Over Time Chart
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
-
-The first chart that you will create and include will show the trend over time of your variable/topic. Think carefully about what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- Show more than one, but fewer than ~10 trends
-  - This may mean showing the same measure for different locations or different racial groups. Think carefully about a meaningful comparison of locations (e.g., the top 10 counties in a state, top 10 states, etc.)
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear legend title
-
-When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
-
-Here's an example of how to run an R script inside an RMarkdown file:
-
-``````{r, echo = FALSE, code = readLines("chart1_example.R")}
+```{r, echo = FALSE, code = readLines("chart1_example.R")}
+source("chart1_example.R")
 ```
+
+I added a line chart to visualize the total population trends of the top ten states with the highest total prison population. The purpose of this chart is to understand how the prison population in these states changes over time and identify patterns. It is found in the chart that the number of imprisoned people is generally increasing, but the growth rate is not significant. There are also differences in prison rates among the top five states, such as California and New York states, where prison populations have been consistently high. In contrast, other states have relatively low prison populations. These differences in crime rates may be related to local residents, community diversity, and judicial policies. Overall, this chart provides a specific understanding of these states' crime and imprisonment patterns and shows the prison population's dynamic changes.
 
 ### Variable Comparison Chart
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
+```{r, echo = FALSE, code = readLines("chart2_example.R")}
+source("chart2_example.R")
+```
 
-The second chart that you will create and include will show how two different (continuous) variables are related to one another. Again, think carefully about what such a comparison means and what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- If you choose to add a color encoding (not required), you need a legend for your different color and a clear legend title
+I compared the trends in the number of black and white prisoners using a scatter plot, and we can clearly identify the differences in the number of prisoners imprisoned between the two races. The chart shows that the number of black and white prisoners has been increasing since 1985 and the data is missing after 2015,there is a positive correlation between the number of prisoners of both races and the increase in the number of years. But the number of black prisoners has always been significantly higher than that of white prisoners. This reflects the existence of racial bias in every stage of the criminal justice system, including police arrests and judges' sentencing, and black people are more likely to face imprisonment compared to white people. This may be due to socio-economic differences, as black communities face limited opportunities for employment and education, which increases their likelihood of committing criminal offenses. Law enforcement agencies may also over-regulate black communities due to racism, and racial bias can significantly affect legal decisions.
 
 ### Map
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
+```{r, echo = FALSE, code = readLines("map_example.R")}
+source("map_example.R")
+```
 
-The last chart that you will create and include will show how a variable is distributed geographically. Again, think carefully about what such a comparison means and what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- Your map needs a title
-- Your color scale needs a legend with a clear label
-- Use a map based coordinate system to set the aspect ratio of your map
-
+I created a map to display the distribution of the black jail population rate in each state in 2018, showcasing the significant differences in racism issues among states. 2018 was chosen for analysis because it is the year closest to the present in the data and reflects the most social phenomenon. It can be clearly seen in the figure that the middle U.S. region has a higher rate of black imprisonment than West and East America, and Utah has the highest rate of black incarceration. Racism may be closely related to the development and social background of the state. The western and eastern regions of the United States have many large international cities. These regions are usually the financial and technological core of the United States, and their attitude towards minorities may be more inclusive, with more emphasis on racial equality. In contrast, the middle U.S. region may include some economically underdeveloped states, which may be more prone to obvious racism issues. The relationship between regional development and racism has great implications for users to understand the causes and influencing factors of racism.
