@@ -17,7 +17,7 @@ The Vera Institute and U.S. Department of Justice Bureau of Justice Statistics (
 
 ### Trends Over Time Chart
 
-```{r, echo = FALSE, code = readLines("chart1_example.R")}
+```{r, echo = FALSE, message = FALSE, code = readLines("chart1_example.R")}
 source("chart1_example.R")
 ```
 
@@ -33,7 +33,7 @@ I compared the trends in the number of black and white prisoners using a scatter
 
 ### Map
 
-```{r, echo = FALSE, code = readLines("map_example.R")}
+```{r, echo = FALSE, message = FALSE, code = readLines("map_example.R")}
 source("map_example.R")
 ```
 
